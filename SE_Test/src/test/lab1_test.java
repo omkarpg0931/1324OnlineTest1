@@ -6,5 +6,4 @@ public class lab1_test {
 		// TODO Auto-generated method stub
 			System.out.println("Welcome to world of Software Engineering");
 	}
-
 }

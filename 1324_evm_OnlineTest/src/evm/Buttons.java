@@ -29,6 +29,7 @@ public class Buttons {
 		System.out.println("Siddhesh Bhagat"+"\t"+"Press 3");
 		System.out.println("Vishal Kinjavdekar"+"\t"+"Press 4");
 		System.out.println("Jarret Fernandes"+"\t"+"Press 5\n\n\n\n\n\n");
+		System.out.println("Not Voting"+"\t"+"Press 6\n\n\n\n\n\n");
 		System.out.println("To Close"+"\t"+"Press 0");
 	}
 	
@@ -58,6 +59,10 @@ public class Buttons {
 			candidate5.increment_vote_count();
 		}
 		
+		else if(entry==6){
+			System.out.println("Thank You!! We Respect Your Decision to vote for 'NOT VOTING'");
+			
+		}
 		else if(entry==0){
 			System.out.println("Thank You!! Voting Closed");
 		}
@@ -65,14 +70,27 @@ public class Buttons {
 		else
 		{
 			System.out.println("Unknown Command");
-            Candidates.castVote();
+            candidates.castVote();
 		}
 		
 	}
 
 	private int getVoterEntry() {
 		// TODO Auto-generated method stub
-		return 0;
-	}
+		System.out.println("Enter Your Vote:- ");
+		return keyboard.nextInt();
 
+	}
+	
+	private void setupBallot(){
+        display_vote_menu();
+        return;
+	}
+	
+	private String setupVotingMsg(){
+		votingMessage ="Thank You!! May you have voted for the best";
+		return votingMessage;
+	}
+	
+		
 }
